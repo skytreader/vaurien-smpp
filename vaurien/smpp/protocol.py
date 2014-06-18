@@ -18,4 +18,11 @@ class SMPP(BaseProtocol, Protocol):
     options = {"port": ("Port where vaurien will bind", int, 16981),}
 
     def _handle(self, source, dest, to_backend):
+        """
+        Just default TCP pass-through behavior for now.
+        """
         data = self._get_data(source)
+        if data:
+            dest.sendall(data)
+
+        return data != ""
