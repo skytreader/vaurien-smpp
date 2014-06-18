@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name = "vaurien-smpp",
+    name = "vaurienex-smpp",
     version = "0.1.0",
     author = "Chad Estioco",
     author_email = "chadestioco@gmail.com",
